@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Zerostwo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://zerostwo.github.io/"/>
+  <updated>2018-11-26T15:08:03.907Z</updated>
+  <id>https://zerostwo.github.io/</id>
+  
+  <author>
+    <name>Sinclair Duan</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>食品中氨基酸的测定</title>
+    <link href="https://zerostwo.github.io/posts/116b175/"/>
+    <id>https://zerostwo.github.io/posts/116b175/</id>
+    <published>2018-11-25T05:54:56.000Z</published>
+    <updated>2018-11-26T15:08:03.907Z</updated>
+    
+    <summary type="html">
+    
+      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h4 id=&quot;范围&quot;&gt;&lt;a href=&quot;#范围&quot; class=&quot;headerlink&quot; title=&quot;范围&quot;&gt;&lt;/a&gt;范围&lt;/h4&gt;&lt;p&gt;本标准规定了用氨基酸分析仪(茚三酮柱后衍生离子交换色谱仪)测定食品中氨基酸的方法。&lt;br&gt;本标准适用于食品中酸水解氨基酸的测定,包括天冬氨酸、苏氨酸、丝氨酸、谷氨酸、脯氨酸、甘氨酸、丙氨酸、缬氨酸、蛋氨酸、异亮氨酸、亮氨酸、酪氨酸、苯丙氨酸、组氨酸、赖氨酸和精氨酸共16种氨基酸。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="科研相关" scheme="https://zerostwo.github.io/categories/%E7%A7%91%E7%A0%94%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="营养成分" scheme="https://zerostwo.github.io/tags/%E8%90%A5%E5%85%BB%E6%88%90%E5%88%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>食品中灰分的测定</title>
+    <link href="https://zerostwo.github.io/posts/19f76042/"/>
+    <id>https://zerostwo.github.io/posts/19f76042/</id>
+    <published>2018-11-24T12:29:20.000Z</published>
+    <updated>2018-11-26T15:08:03.907Z</updated>
+    
+    <summary type="html">
+    
+      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h4 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot; title=&quot;原理&quot;&gt;&lt;/a&gt;原理&lt;/h4&gt;&lt;p&gt;食品经灼烧后所残留的无机物质称为灰分。灰分数值系用灼烧、称重后计算得出。&lt;/p&gt;
+&lt;h4 id=&quot;仪器和设备&quot;&gt;&lt;a href=&quot;#仪器和设备&quot; class=&quot;headerlink&quot; title=&quot;仪器和设备&quot;&gt;&lt;/a&gt;仪器和设备&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;马弗炉&lt;/li&gt;
+&lt;li&gt;烘箱&lt;/li&gt;
+&lt;li&gt;分析天平（0.1mm）&lt;/li&gt;
+&lt;li&gt;坩埚&lt;/li&gt;
+&lt;li&gt;干燥器&lt;/li&gt;
+&lt;li&gt;电炉&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="科研相关" scheme="https://zerostwo.github.io/categories/%E7%A7%91%E7%A0%94%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="营养成分" scheme="https://zerostwo.github.io/tags/%E8%90%A5%E5%85%BB%E6%88%90%E5%88%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Love</title>
+    <link href="https://zerostwo.github.io/posts/5782501d/"/>
+    <id>https://zerostwo.github.io/posts/5782501d/</id>
+    <published>2018-11-23T15:35:27.000Z</published>
+    <updated>2018-11-26T15:09:27.227Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;小白！&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;mjpage&quot;&gt;&lt;svg xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;19.191ex&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="小白" scheme="https://zerostwo.github.io/categories/%E5%B0%8F%E7%99%BD/"/>
+    
+    
+      <category term="小白" scheme="https://zerostwo.github.io/tags/%E5%B0%8F%E7%99%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Statistics</title>
+    <link href="https://zerostwo.github.io/posts/42233/"/>
+    <id>https://zerostwo.github.io/posts/42233/</id>
+    <published>2018-11-23T09:11:22.000Z</published>
+    <updated>2018-11-26T15:08:03.907Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;We always hope trying to test hypotheses about the world using only a small part of information available to
+        
+      
+    
+    </summary>
+    
+      <category term="Statistics" scheme="https://zerostwo.github.io/categories/Statistics/"/>
+    
+    
+      <category term="Math" scheme="https://zerostwo.github.io/tags/Math/"/>
+    
+  </entry>
+  
+</feed>
