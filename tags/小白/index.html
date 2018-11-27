@@ -172,9 +172,9 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/营养成分/">营养成分<span>2</span></a></li>
-		
 			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/营养成分/">营养成分<span>2</span></a></li>
 		
 			<li><a href="/tags/小白/">小白<span>1</span></a></li>
 		
@@ -241,12 +241,34 @@
   </div>
   <div class="container-narrow">
   <footer> <p>
-  © 2018 Zerostwo 
+  </p><div>
+      <script language="javascript">
+      function show_date_time(){
+      window.setTimeout("show_date_time()", 1000);
+      BirthDay=new Date("11/23/2018 23:56:24");//这个日期是可以修改的
+      today=new Date();
+      timeold=(today.getTime()-BirthDay.getTime());//其实仅仅改了这里
+      sectimeold=timeold/1000
+      secondsold=Math.floor(sectimeold);
+      msPerDay=24*60*60*1000
+      e_daysold=timeold/msPerDay
+      daysold=Math.floor(e_daysold);
+      e_hrsold=(e_daysold-daysold)*24;
+      hrsold=Math.floor(e_hrsold);
+      e_minsold=(e_hrsold-hrsold)*60;
+      minsold=Math.floor((e_hrsold-hrsold)*60);
+      seconds=Math.floor((e_minsold-minsold)*60);
+      span_dt_dt.innerHTML="Running "+daysold+" d "+hrsold+" h "+minsold+" m "+seconds+" s";
+      }
+      show_date_time();
+      </script><span id="span_dt_dt"> </span>
+  </div>
+  <br>© 2018 Zerostwo 
   <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <span id="busuanzi_container_site_pv"><i class="fa fa-linux" aria-hidden="true"></i>
   <span id="busuanzi_value_site_pv"></span></span>
   <br> Site by <a href="https://github.com/zerostwo">Sinclair Duan</a>.
-</p> </footer>
+<p></p> </footer>
 </div> <!-- container-narrow -->
   
   <a id="gotop" href="#">   
