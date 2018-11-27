@@ -109,48 +109,47 @@
   <div class="container">
   	<div class="content">
     	 <!-- title --><div class="page-header">
-    <h1> About</h1>
+    <h1><i class="far fa-address-card"></i> About</h1>
 </div>
-
-<h1>Introduction</h1>
-<h2>Welcome to my personal blog.I’m very glad to meet u.</h2>
-<h2>I’am Sinclair Duan,a student.I love cool things.</h2>
-<h2>I have a cute girlfriend, Xiaobai, I love her.</h2>
+<h2>
+    <script language="javascript">
+    function show_date_time(){
+    window.setTimeout("show_date_time()", 1000);
+    BirthDay=new Date("11/23/2018 23:56:24");//这个日期是可以修改的
+    today=new Date();
+    timeold=(today.getTime()-BirthDay.getTime());//其实仅仅改了这里
+    sectimeold=timeold/1000
+    secondsold=Math.floor(sectimeold);
+    msPerDay=24*60*60*1000
+    e_daysold=timeold/msPerDay
+    daysold=Math.floor(e_daysold);
+    e_hrsold=(e_daysold-daysold)*24;
+    hrsold=Math.floor(e_hrsold);
+    e_minsold=(e_hrsold-hrsold)*60;
+    minsold=Math.floor((e_hrsold-hrsold)*60);
+    seconds=Math.floor((e_minsold-minsold)*60);
+    span_dt_dt.innerHTML="网站已经运行"+daysold+"天"+hrsold+"小时"+minsold+"分钟"+seconds+"秒";
+    }
+    show_date_time();
+    </script><span id="span_dt_dt"> </span>
+</h2>
+<h2>欢迎来到我的Zerostwo，这个网站名字来源于2018年初的一部番《DARLING in the FRANXX》里面女主的名字。</h2>
+<h1>如何联系我</h1>
+<h2>联系到我有很多种方式, 欢迎大家用各种途径留言, 有时间的话, 我会尽量回复你的留言或问题. 以下是几种可以讨论的方式:</h2>    
+<ul>
+<li><h2><strong>Email:</strong>duansongtoki@icloud.com</h2></li>
+<li><h2><strong>Github:</strong>https://github.com/zerostwo</h2></li>
+</ul>
 <h2>To be continued. . .<span class="blink-fast">∎</span></h2>
-
-<h1>Development history</h1>
 	</div>
   </div>
   <div class="container-narrow">
   <footer> <p>
-  </p><p><i class="far fa-clock"></i>
-      <script language="javascript">
-      function show_date_time(){
-      window.setTimeout("show_date_time()", 1000);
-      BirthDay=new Date("11/23/2018 23:56:24");//这个日期是可以修改的
-      today=new Date();
-      timeold=(today.getTime()-BirthDay.getTime());//其实仅仅改了这里
-      sectimeold=timeold/1000
-      secondsold=Math.floor(sectimeold);
-      msPerDay=24*60*60*1000
-      e_daysold=timeold/msPerDay
-      daysold=Math.floor(e_daysold);
-      e_hrsold=(e_daysold-daysold)*24;
-      hrsold=Math.floor(e_hrsold);
-      e_minsold=(e_hrsold-hrsold)*60;
-      minsold=Math.floor((e_hrsold-hrsold)*60);
-      seconds=Math.floor((e_minsold-minsold)*60);
-      span_dt_dt.innerHTML="Have running "+daysold+" d "+hrsold+" h "+minsold+" m "+seconds+" s";
-      }
-      show_date_time();
-      </script><span id="span_dt_dt"> </span>
-  </p>
-  <br>© 2018 Zerostwo 
-  <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<span id="busuanzi_container_site_pv"><i class="fa fa-linux" aria-hidden="true"></i>
+  <br><i class="fa fa-copyright"></i> 2018 Zerostwo <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <span id="busuanzi_container_site_pv"><i class="fa fa-linux" aria-hidden="true"></i>
   <span id="busuanzi_value_site_pv"></span></span>
   <br> Site by <a href="https://github.com/zerostwo">Sinclair Duan</a>
-<p></p> </footer>
+</p> </footer>
 </div> <!-- container-narrow -->
   
   <a id="gotop" href="#">   
