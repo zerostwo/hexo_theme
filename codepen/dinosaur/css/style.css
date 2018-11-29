@@ -51,7 +51,7 @@
             animation: move_cry 7s 3s infinite;
   }
   .freeze::after {
-    content: "Hover to calm dino";
+    content: "Zerostwo";
     position: absolute;
     top: 20px;
     left: 20px;
