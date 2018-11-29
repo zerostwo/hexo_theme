@@ -1,0 +1,145 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: baseline;
+}
+
+body {
+  background-color: #2A2C31;
+  color: #FFFEDF;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.center {
+  text-shadow: 0px 1px 1px #191919;
+  cursor: default;
+  width: 450px;
+  margin: auto;
+  display: block;
+  position: relative;
+}
+.center .title {
+  padding-top: 10px;
+  width: 100%;
+  font-weight: 600;
+  text-align: center;
+  font-size: 45px;
+  padding-bottom: 15px;
+}
+.center .settings {
+  width: 350px;
+  padding-bottom: 15px;
+  display: table;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.center .settings .description {
+  font-size: 15px;
+}
+.center .settings .value {
+  font-size: 30px;
+}
+.center .settings .session {
+  width: 108px;
+  float: right;
+}
+.center .settings .session .description {
+  color: #2ecc71;
+}
+.center .settings .break {
+  width: 100px;
+  float: left;
+}
+.center .settings .break .description {
+  color: #e74c3c;
+}
+.center .settings .control {
+  font-size: 33px;
+  cursor: pointer;
+}
+.center .settings .control:hover {
+  color: #95a5a6;
+}
+.center .next-pomodoro {
+  margin-left: 30px;
+  float: left;
+  cursor: pointer;
+  font-weight: bold;
+}
+.center .reset-pomodoro {
+  margin-right: 30px;
+  float: right;
+  cursor: pointer;
+  font-weight: bold;
+}
+.center .pomodoro {
+  cursor: pointer;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  clear: both;
+  border-radius: 50%;
+  border: 3px #2ecc71 solid;
+  position: relative;
+  overflow: hidden;
+  text-shadow: none;
+}
+.center .pomodoro .fill {
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  left: 0;
+}
+.center .pomodoro .fill.session {
+  bottom: 0;
+  z-index: 2;
+  background-color: #2ecc71;
+}
+.center .pomodoro .fill.break {
+  top: 0;
+  z-index: 3;
+  background-color: #c0392b;
+}
+.center .pomodoro .time-left {
+  top: 32%;
+  left: 50%;
+  margin-left: -125px;
+  width: 250px;
+  text-align: center;
+  font-size: 60px;
+  z-index: 4;
+  position: absolute;
+}
+.center .pomodoro .status {
+  bottom: 35%;
+  left: 50%;
+  margin-left: -125px;
+  width: 250px;
+  text-align: center;
+  font-size: 15px;
+  z-index: 4;
+  position: absolute;
+}
+
+.footer {
+  clear: both;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 25px;
+  font-size: 12px;
+  text-align: center;
+}
+.footer a {
+  color: #2ecc71;
+  text-decoration: none;
+  font-weight: 600;
+}

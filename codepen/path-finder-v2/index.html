@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="en"><head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  <title>Path Finder v2</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <svg id="svg"></svg>
+<div id="ui-score">0</div>
+<div id="ui-timer">12 sec</div>
+
+<div class="ui-screen is-visible" id="ui-screen--start">
+  <div class="ui-screen__content">
+    <h1 class="ui-logo col--1">Path Finder <span>v1</span></h1>
+    <p class="ui-p col--1">
+      Link the given point to the nearest yellow dot. <br>
+      Pay attention to the time in the bottom left corner.
+    </p>
+    <button id="ui-btn--start" class="ui-btn">START</button>
+  </div>
+</div>
+
+<div class="ui-screen" id="ui-screen--end">
+  <div class="ui-screen__content">
+    <h1 class="ui-screen__title col--1">Game Over</h1>
+    <p class="ui-p col--1">
+      Looks like someone did a terrible mistake!<br>
+      Your final score is: <br><span id="ui-score-end"></span></p>
+    <button id="ui-btn--end" class="ui-btn">TRY AGAIN!</button>
+  </div>
+</div>
+
+<div class="ui-screen" id="ui-screen--level">
+  <div class="ui-screen__content">
+    <h1 class="ui-screen__title col--1">Next level!</h1>
+    <p class="ui-p col--1">Not bad, but I'm sure you can do even better!</p>
+    <button id="ui-btn--level" class="ui-btn">start new level</button>
+  </div>
+</div>
+  
+  
+
+    <script src="js/index.js"></script>
+
+
+
+
+
+
+
+</body></html>

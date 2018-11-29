@@ -1,0 +1,445 @@
+/* ///////////////////
+      FONT
+///////////////////*/
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Bungee+Outline|Space+Mono');
+
+
+
+
+
+/* ///////////////////
+      ANIMATIONS 
+///////////////////*/
+
+
+
+
+
+@keyframes jumping {
+  0%    {transform:scale(2);}
+  100%  {transform:scale(1);}
+}
+
+@keyframes dotReveal {
+  to  {opacity:1;}
+}
+
+@keyframes line {
+  0%    {stroke-dashoffset:0}
+  100%    {stroke-dashoffset:100%}
+}
+
+@keyframes score-after {
+  0%    {transform: scale(1); opacity:0;}
+  10%    {transform: scale(1.5); opacity:1;}
+  100%    {transform: scale(1); opacity:0;}
+}
+
+@keyframes score-after2 {
+  0%    {transform: scale(1); opacity:0;}
+  10%    {transform: scale(1.5); opacity:1;}
+  100%    {transform: scale(1); opacity:0;}
+}
+
+@keyframes time-expiring {
+  0%    { transform: scale(1); opacity:1;}
+  100%  { transform: scale(1); opacity:0;}
+}
+
+@keyframes screen-rotate {
+  0%    { transform: translate(-50%,-50%) rotate(0)}
+  100%  { transform: translate(-50%,-50%) rotate(360deg)}
+}
+
+
+
+
+
+
+/* ///////////////////
+      MAIN 
+///////////////////*/
+
+
+
+
+
+body {
+  font-family: 'Space Mono', monospace;
+  cursor:crosshair;
+  background-color: #106fb7;
+  background-image: linear-gradient(to top, rgba(46, 204, 113,0.1) 1px, rgba(255,255,255,0) 0),
+                    linear-gradient(to right, rgba(46, 204, 113,0.1) 1px, rgba(255,255,255,0) 0),
+                    radial-gradient(circle at center, rgba(0,0,0,0), rgba(0,0,0,0.2));
+  background-size: 25px 25px, 25px 25px, 100%;
+}
+
+svg, html, body, #app  {
+  box-sizing: border-box;
+  height:100%;
+  width:100%;
+  padding:0;
+  margin:0;
+  overflow:hidden;
+}
+
+svg { position: relative; z-index:1; }
+
+
+
+
+/* ///////////////////
+      DOTS & LINES 
+///////////////////*/
+
+
+
+
+
+.dot {
+  z-index:10;
+  width: 10px;
+  height: 10px;
+  fill: #f1c40f;
+  -moz-transform-origin: center;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  /*transition: all 0.4s cubic-bezier(0.175, 0.885, 0.320, 1.275);*/
+}
+
+.dot:not(.dot--starting) {
+  opacity:0;
+  animation: dotReveal 1s linear;
+  animation-fill-mode: forwards;
+}
+
+#svg  .dot[data-visited=true] {
+  fill: rgba(255, 255, 255,1.0);
+  stroke:#106fb7;
+  opacity:1;
+}
+
+#svg .dot[data-starting=true] {
+  fill:#106fb7;
+  stroke: rgba(255, 255, 255,0.5);
+  stroke-width:3;
+  stroke-miterlimit: outside;
+}
+
+
+/*
+.dot--0 {fill: #E29B98;}
+.dot--1 {fill: #EC7267;}
+.dot--2 {fill: #F7567C;}
+.dot--3 {fill: #FFE868;}
+.dot--4 {fill: #9AE878;}
+*/
+
+
+.line {
+  z-index:10;
+  stroke: rgba(255, 255, 255,1.0);
+  stroke-width:2;
+  stroke-dasharray: 2 16;
+  animation: line 10s linear infinite;
+}
+
+.line--preline {
+  opacity:0;
+}
+
+.line--preline.is-visible {
+  opacity:1;
+}
+
+
+
+
+
+/* ///////////////////
+      UI 
+///////////////////*/
+
+
+
+
+.col--1 {color:rgba(16,111,183, 1);}
+
+.ui-link {color:#f1c40f;text-decoration: none;}
+
+#ui-timer {
+  text-align: center;
+  opacity:1;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8em;
+  line-height:2em;
+  position:absolute;
+  bottom:1em;
+  width: 6em;
+  left:1em;
+  margin: 0 auto;
+  height: 2em;
+  border-radius: 2em;
+  border: 2px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
+  color:white;
+}
+
+#ui-timer:before {
+  content:'';
+  display:block;
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  border: 6px solid rgba(255,255,255,0.2);
+  border-radius: 2em;
+  width:100%;
+  height:100%;
+}
+
+#ui-timer.is-expiring {
+  color: #F7567C;		
+  background-color: rgba(247,86,124,0.1);
+  border: 2px solid rgba(247,86,124,0.2);
+}
+
+#ui-timer.is-expiring:before {
+  border: 6px solid rgba(247,86,124,0.5);
+}
+
+#ui-timer.is-expiring:after {
+  content:'';
+  display:block;
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  border: 6px solid rgba(247,86,124,0.5);
+  border-radius: 2em;
+  width:100%;
+  height:100%;
+  animation: time-expiring 0.5s infinite alternate;
+}
+
+#ui-score {
+  text-align: center;
+  opacity:1;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8em;
+  line-height:2em;
+  position:absolute;
+  bottom:1em;
+  right:1em;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
+  color:white;
+}
+
+#ui-score:before {
+  content:'';
+  display:block;
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  border: 6px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  width:100%;
+  height:100%;
+}
+
+#ui-score:after {
+  content: '';
+  display:block;
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  border: 6px solid rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 50%;
+  width:100%;
+  height:100%;
+  animation: score-after 1s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+  animation-fill-mode: forwards;
+}
+
+#ui-score.is-changing:after {
+  animation: score-after2 1s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+  animation-fill-mode: forwards;
+}
+
+.ui-screen {
+  visibility:hidden;
+  opacity:0;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(15, 81, 133,0.4);
+  z-index: 2;
+  display:flex;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.ui-screen {
+  background-color: #106fb7;
+  background-image: linear-gradient(to top, rgba(46, 204, 113,0.1) 1px, rgba(255,255,255,0) 0),
+                    linear-gradient(to right, rgba(46, 204, 113,0.1) 1px, rgba(255,255,255,0) 0);
+  background-size: 25px 25px;
+}
+
+#ui-screen--end.ui-screen {
+  background-color:rgba(204, 40, 79, 0.8);
+  background-image: linear-gradient(to top, rgba(46, 204, 113,0.1) 1px, rgba(255,255,255,0) 0),
+                    linear-gradient(to right, rgba(46, 204, 113,0.1) 1px, rgba(255,255,255,0) 0);
+  background-size: 25px 25px;
+}
+
+#ui-screen--end .ui-screen__title,
+#ui-screen--end .ui-p,
+#ui-screen--end .ui-btn {
+  color: #F7567C;
+}
+
+#ui-score-end {
+  font-size: 2em;
+  color:white;
+}
+
+.ui-screen.is-visible {visibility:visible;opacity:1;}
+
+.ui-screen__content {
+  z-index: 20;
+  position: relative;
+  min-width: 60%;
+  max-width: 90%;
+  text-align:center;
+  transform: scale(0.8);
+  margin: auto;
+  padding: 50px;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.ui-screen:before,
+.ui-screen:after,
+.ui-screen__content:before,
+.ui-screen__content:after{
+  content: '';
+  display:block;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dotted rgba(255,255,255,0.3);
+  z-index: -1;
+  top:50%;
+  left:50%;
+  animation: screen-rotate 4s linear infinite; 
+}
+
+.ui-screen:before {
+  width: 40%;
+  height: 50%;
+  animation-duration:4.2s;
+}
+
+.ui-screen:after {
+  width: 60%;
+  height: 40%;
+  animation-duration:2.7s;
+}
+
+.ui-screen__content:before {
+  width: 60%;
+  height: 40%;
+  animation-duration:2.1s;
+}
+
+.ui-screen__content:after {
+  width: 60%;
+  height: 40%;
+  animation-duration:3.3s;
+}
+
+
+.ui-screen.is-visible .ui-screen__content {transform: scale(1);}
+
+.ui-btn {
+  cursor:pointer;
+  outline: none;
+  text-transform: uppercase;
+  font-family: 'Space Mono', monospace;
+  color:rgba(16,111,183, 1);
+  background-color: white;
+  font-size: 0.9em;
+  letter-spacing: 0.2em;
+  padding: 0.6em 2.4em;
+  border: none;
+  border-radius: 2em;
+  box-shadow: 0 0 0 0.5em rgba(0,0,0, 0.05);
+  transition: box-shadow 0.1s ease-out, 
+              background-color 0.1s ease-out, 
+              color 0.1s ease-out,
+              background-size 4s linear;
+  
+  background-image: linear-gradient(to right, #f1c40f 0, #f1c40f 0);
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  background-position: left 0 bottom 0;
+}
+
+.ui-screen.is-visible .ui-btn {
+  background-size: 100% 100% ;
+}
+
+.ui-btn:hover {
+  box-shadow: 0 0 0 1em rgba(0,0,0, 0.2);
+  background-color: rgba(16,111,183, 1);
+  color:white;
+}
+
+.ui-logo {
+  color:#f1c40f;
+  font-family: 'Bungee Outline', cursive;
+  font-size: 4em;
+  margin: 0;
+}
+
+.ui-logo span {
+  font-size: 0.5em;
+  position: relative;
+  top: -1em;
+  left: -0.4em;
+}
+
+.ui-screen__title {
+  color:#f1c40f;
+  font-family: 'Bungee Outline', cursive;
+}
+
+.ui-p {
+  color:white;
+  font-size: 1.2em;
+  font-weight:normal;
+  margin-bottom: 1.6em;
+}
+
+@media (max-width:480px) {
+  
+  .line--preline {display:none;}
+  .ui-screen__content {
+    width: 95%;
+  }
+  
+  .ui-screen__title,
+  .ui-logo {
+    font-size: 2em;
+  }
+  
+  .ui-p {font-size: 0.8em;}
+}
+

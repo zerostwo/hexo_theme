@@ -1,0 +1,35 @@
+html, body {
+  height: 100%;
+  padding:0;
+  margin: 0;
+}
+
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Patrick Hand', cursive;
+  background: #0A6C96; /* default */
+}
+
+.pcr-app.visible {
+    top: 50% !important;
+    left: 50% !important;
+    width: 450px !important;
+    height: 240px !important;
+    margin-top: -120px !important;
+    margin-left: -225px !important;
+}
+
+.color-name {
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  right: 10px;
+  text-align: center;
+  font-size: 44px;
+  font-weight: bold;
+  margin-top: 140px;
+  color: white;
+}

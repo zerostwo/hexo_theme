@@ -1,0 +1,106 @@
+:root {
+  font-size: 12px;
+  font-family: monospace;
+  --color: #0099ad;
+  --svg-fill: #192023;
+  --svg-background: #b8b1b1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  color: var(--color);
+  background: #ccc;
+  background-color: var(--svg-fill);
+}
+
+a {
+  color: inherit;
+}
+
+svg {
+  display: block;
+  fill: currentColor;
+}
+
+#main-svg {
+  fill: var(--svg-fill);
+}
+
+svg > .background {
+  fill: var(--svg-background);
+}
+
+.g {
+  opacity: .15;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: .5rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--svg-fill);
+  opacity: .9;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding-right: 1em;
+}
+
+.info > i {
+  font-size: 16px;
+  margin-right: 0.5em;
+}
+
+.controls {
+  flex: 1;
+  white-space: nowrap;
+  text-align: right;
+  color: rgba(255,255,255, .75);
+  font-size: 18px;
+}
+
+.controls > i {
+  font-size: inherit;
+}
+
+.credits {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.75rem;
+}
+
+.credits > span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
