@@ -2,13 +2,10 @@
   <meta charset="UTF-8">
   <title>♥Mo.js Burst Heart Button svg</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-
-  
-      <style>
-      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <style>
+    /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
       * {
   margin: 0;
   padding: 0;
@@ -16,7 +13,6 @@
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
 }
-
 html, body {
   overflow: hidden;
   height: 100%;
@@ -24,7 +20,6 @@ html, body {
   background: #efefef;
   font-family: Montserrat;
 }
-
 label {
   position: relative;
   display: inline-block;
@@ -34,11 +29,9 @@ label {
   cursor: pointer;
   transition: all 0.3s ease-out;
 }
-
 input[type="checkbox"] {
   display: none;
 }
-
 input[type="checkbox"] + label {
   position: absolute;
   z-index: 100;
@@ -56,12 +49,10 @@ input[type="checkbox"] + label {
   border-radius: 50%;
   background-color: #efefef;
 }
-
 input[type="checkbox"]:checked + label svg {
   fill: red;
   animation: confirm 1s normal ease-in-out;
 }
-
 input[type="checkbox"] + label:after + svg {
   content: '';
   z-index: -1;
@@ -75,14 +66,12 @@ input[type="checkbox"] + label:after + svg {
   transform: scale(0);
   -webkit-transform: scale(0);
 }
-
 label svg {
   display: inline-flex;
   vertical-align: middle;
   width: 55px;
   fill: #666666;
 }
-
 h1::after {
   content: "Click the heart";
   color: black;
@@ -95,7 +84,6 @@ h1::after {
   font-size: 3vmin;
   font-family: 'Roboto Mono', monospace;
 }
-
 @keyframes confirm {
   0% {
     opacity: 0;
@@ -104,36 +92,21 @@ h1::after {
     opacity: 1;
   }
 }
-
     </style>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 </head>
-
 <body>
-
   <h1></h1>
-
-<input type="checkbox" id="like">
-<label for="like">
-<svg id="heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 29.6">
-    <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+  <input type="checkbox" id="like">
+  <label for="like">
+    <svg id="heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 29.6">
+      <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
 	c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"></path>
-</svg>
-</label>
+    </svg>
+  </label>
   <script src="https://cdn.jsdelivr.net/mojs/0.265.6/mo.min.js"></script>
-<script src="https://cdn.jsdelivr.net/mojs-player/0.43.15/mojs-player.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-  
-
-    <script src="js/index.js"></script>
-
-
-
-
-
-
+  <script src="https://cdn.jsdelivr.net/mojs-player/0.43.15/mojs-player.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/index.js"></script>
 
 </body></html>
