@@ -1,0 +1,35 @@
+@font-face {
+	font-family: 'inconsolata';
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/Simplifica.woff') format('woff');
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+}
+body {
+	font-family: inconsolata;
+	margin: 0;
+	background: #000;
+}
+div {
+	position: relative; 
+	overflow: hidden;
+	line-height: 0;
+}
+img {
+	width: 100%;
+	filter: contrast(60%);
+}
+p {
+	line-height: 1;
+	text-align: justify;
+	padding: .18vw;
+	margin-top: 0;
+	font-size: 1.76vw;
+	color: #fff;
+	background: #000;
+	mix-blend-mode: multiply;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
