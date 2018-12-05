@@ -17,7 +17,7 @@
 
 
   
-  <title>Nothing | Zerostwo</title>
+  <title>hexo插件使用总结 | Zerostwo</title>
   <meta name="author" content="Sinclair Duan">
   
   <meta name="description" content="This is my world!">
@@ -25,7 +25,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Nothing">
+  <meta property="og:title" content="hexo插件使用总结">
   <meta property="og:site_name" content="Zerostwo">
 
   
@@ -109,7 +109,7 @@
   <div class="container">
     <div class="content">
       <div class="page-header">
-			<h1> Nothing</h1>
+			<h1> hexo插件使用总结</h1>
 		</div>
 	
 
@@ -129,20 +129,13 @@
 			<div class="mypage">
 				
 
-				<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-<div id="hbe-security">
-  <div class="hbe-input-container">
-  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read.">
-    <label for="pass">Enter password to read.</label>
-    <div class="bottom-line"></div>
-  </div>
-</div>
-<div id="decryptionError" style="display: none;">Incorrect Password!</div>
-<div id="noContentError" style="display: none;">No content to display!</div>
-<div id="encrypt-blog" style="display:none">
-U2FsdGVkX19cMrigtWnrNKOvhC5giZ/+HHrjtD7mphMYLHaed4KOBsP47RyuJ77uepLeH1p2oUSz+Ax47dDLaL/QC+pzCkYezQmc5l0anx4FH0SofB7ZBjKAj4Y78Jvin9cT/r6sZgX/Z8amdGT22waFMNfcmjakOWi56fxpXXU+HfOSZ4FPELrE+6W5XGCwm4V9JOFKT78IWVAQ77zx6rwZuUqpHiK1sQMY6mDi1nW9CV/QLWvScIi/+nz5Oq3aBROF7QLBqfkW8kMFL4RWJDSPJQQA7U8VEdv1dALlmlwrj54DugxGT+wxZEhFDI3fJ4ZZQKlIVvFhW/IMZj+OnA==
-</div>
-<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
+				<h3 id="hexo插件简介"><a href="#hexo插件简介" class="headerlink" title="hexo插件简介"></a>hexo插件简介</h3><p>Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心模块的源码。在 Hexo 中有两种形式的插件：</p>
+<h4 id="脚本（Scripts）"><a href="#脚本（Scripts）" class="headerlink" title="脚本（Scripts）"></a>脚本（Scripts）</h4><p>如果您的代码很简单，建议您编写脚本，您只需要把 JavaScript 文件放到 <code>scripts</code> 文件夹，在启动时就会自动载入。</p>
+<h4 id="插件（Packages）"><a href="#插件（Packages）" class="headerlink" title="插件（Packages）"></a>插件（Packages）</h4><p>如果您的代码较复杂，或是您想要发布到 NPM 上，建议您编写插件。首先，在 <code>node_modules</code> 文件夹中建立文件夹，文件夹名称开头必须为 <code>hexo-</code>，如此一来 Hexo 才会在启动时载入否则 Hexo 将会忽略它。<br><a id="more"></a><br>文件夹内至少要包含 2 个文件：一个是主程序，另一个是 <code>package.json</code>，描述插件的用途和所依赖的插件。<br></p><figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── <span class="selector-tag">index</span><span class="selector-class">.js</span></span><br><span class="line">└── <span class="selector-tag">package</span><span class="selector-class">.json</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><code>package.json</code> 中至少要包含 <code>name</code>, <code>version</code>, <code>main</code> 属性，例如：<br></p><figure class="highlight json"><figcaption><span>package.json</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"hexo-my-plugin"</span>,</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"0.0.1"</span>,</span><br><span class="line">  <span class="attr">"main"</span>: <span class="string">"index"</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>因此在这篇文章中，我将对我使用的hexo的一些插件做一个记录。</p>
+<h3 id="插件总结"><a href="#插件总结" class="headerlink" title="插件总结"></a>插件总结</h3><h4 id="hexo-tag-demo"><a href="#hexo-tag-demo" class="headerlink" title="hexo-tag-demo"></a>hexo-tag-demo</h4><p>这个插件使用<code>{％demo％}</code>标记在文章内容中创建演示区域（html，css，javascript）。</p>
+
 			</div>
 
 			<div>
@@ -151,12 +144,12 @@ U2FsdGVkX19cMrigtWnrNKOvhC5giZ/+HHrjtD7mphMYLHaed4KOBsP47RyuJ77uepLeH1p2oUSz+Ax4
 
     
     
-    <a href="/posts/ee69e452/" type="button" class="btn btn-default"><i class="fa fa-arrow-circle-o-left"></i> 上一页</a>
+    <a type="button" class="btn btn-default disabled"><i class="fa fa-arrow-circle-o-left"></i>上一页</a>
     
 
     <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
     
-    <a type="button" class="btn btn-default disabled">下一页<i class="fa fa-arrow-circle-o-right"></i></a>
+    <a href="/posts/ee69e452/" type="button" class="btn btn-default ">下一页<i class="fa fa-arrow-circle-o-right"></i></a>
     
 
     
@@ -183,7 +176,7 @@ U2FsdGVkX19cMrigtWnrNKOvhC5giZ/+HHrjtD7mphMYLHaed4KOBsP47RyuJ77uepLeH1p2oUSz+Ax4
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2018-11-23 
+	2018-12-05 
 	</div>
 	
 
@@ -193,7 +186,7 @@ U2FsdGVkX19cMrigtWnrNKOvhC5giZ/+HHrjtD7mphMYLHaed4KOBsP47RyuJ77uepLeH1p2oUSz+Ax4
 	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
     <ul id="categorys" class="tag_box list-unstyled collapse in">
         <meta name="generator" content="Hexo 3.8.0"><li>
-    </li><li><a href="/categories/小白/">小白<span>1</span></a></li>
+    </li><li><a href="/categories/计算机相关/">计算机相关<span>2</span></a></li>
   
 
     </ul>
@@ -205,13 +198,19 @@ U2FsdGVkX19cMrigtWnrNKOvhC5giZ/+HHrjtD7mphMYLHaed4KOBsP47RyuJ77uepLeH1p2oUSz+Ax4
 	<div class="meta-widget">
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
-	  <meta name="generator" content="Hexo 3.8.0"><li><a href="/tags/小白/">小白<span>1</span></a></li>
+	  <meta name="generator" content="Hexo 3.8.0"><li><a href="/tags/前端/">前端<span>2</span></a></li>
     </ul>
 	</div>
 		
 
 	<!-- toc -->
 	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+		   <span class="toc-title">Contents</span>
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#hexo插件简介"><span class="toc-article-text">hexo插件简介</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#脚本（Scripts）"><span class="toc-article-text">脚本（Scripts）</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#插件（Packages）"><span class="toc-article-text">插件（Packages）</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#插件总结"><span class="toc-article-text">插件总结</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#hexo-tag-demo"><span class="toc-article-text">hexo-tag-demo</span></a></li></ol></li></ol>
+		</div>
 	
 	</div>
 	

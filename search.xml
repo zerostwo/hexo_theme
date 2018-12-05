@@ -3,11 +3,11 @@
   
     
     <entry>
-      <title>CSS</title>
-      <link href="/posts/ee69e452/"/>
-      <url>/posts/ee69e452/</url>
+      <title>hexo插件使用总结</title>
+      <link href="/posts/7f07612c/"/>
+      <url>/posts/7f07612c/</url>
       
-        <content type="html"><![CDATA[<html><head></head><body><p>CSS（Cascading Style Sheets即层叠堆积样式）是在HTML元素提供网页结构的地方，控制在该网页上呈现这些HTML元素的方式。样式表可以应用于任何网页，使编辑和管理多页网站的外观和布局变得更加容易。</p><p>CSS3是CSS的最新版本，包含许多强大的功能和属性，使Web设计人员可以更好地控制网页，而不必依赖于使用图像或外部JavaScript库。功能包括灵活的框，动画，多列，圆角，阴影，过渡，渐变，动画等等。</p><p>在这里，我将介绍内容几乎涵盖了CSS和CSS3的所有领域，包括flexbox，动画，图像过滤器，响应工具包，框架，库等等。</p><a id="more"></a><h4 id="CSS基础"><a href="#CSS基础" class="headerlink" title="CSS基础"></a>CSS基础</h4></body></html>]]></content>
+        <content type="html"><![CDATA[<html><head></head><body><h3 id="hexo插件简介"><a href="#hexo插件简介" class="headerlink" title="hexo插件简介"></a>hexo插件简介</h3><p>Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心模块的源码。在 Hexo 中有两种形式的插件：</p><h4 id="脚本（Scripts）"><a href="#脚本（Scripts）" class="headerlink" title="脚本（Scripts）"></a>脚本（Scripts）</h4><p>如果您的代码很简单，建议您编写脚本，您只需要把 JavaScript 文件放到 <code>scripts</code> 文件夹，在启动时就会自动载入。</p><h4 id="插件（Packages）"><a href="#插件（Packages）" class="headerlink" title="插件（Packages）"></a>插件（Packages）</h4><p>如果您的代码较复杂，或是您想要发布到 NPM 上，建议您编写插件。首先，在 <code>node_modules</code> 文件夹中建立文件夹，文件夹名称开头必须为 <code>hexo-</code>，如此一来 Hexo 才会在启动时载入否则 Hexo 将会忽略它。<br><a id="more"></a><br>文件夹内至少要包含 2 个文件：一个是主程序，另一个是 <code>package.json</code>，描述插件的用途和所依赖的插件。<br></p><figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── <span class="selector-tag">index</span><span class="selector-class">.js</span></span><br><span class="line">└── <span class="selector-tag">package</span><span class="selector-class">.json</span></span><br></pre></td></tr></tbody></table></figure><p></p><p><code>package.json</code> 中至少要包含 <code>name</code>, <code>version</code>, <code>main</code> 属性，例如：<br></p><figure class="highlight json"><figcaption><span>package.json</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"hexo-my-plugin"</span>,</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"0.0.1"</span>,</span><br><span class="line">  <span class="attr">"main"</span>: <span class="string">"index"</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p><p>因此在这篇文章中，我将对我使用的hexo的一些插件做一个记录。</p><h3 id="插件总结"><a href="#插件总结" class="headerlink" title="插件总结"></a>插件总结</h3><h4 id="hexo-tag-demo"><a href="#hexo-tag-demo" class="headerlink" title="hexo-tag-demo"></a>hexo-tag-demo</h4><p>这个插件使用<code>{％demo％}</code>标记在文章内容中创建演示区域（html，css，javascript）。</p></body></html>]]></content>
       
       
       <categories>
@@ -26,11 +26,34 @@
     </entry>
     
     <entry>
-      <title>Love</title>
+      <title>CSS</title>
+      <link href="/posts/ee69e452/"/>
+      <url>/posts/ee69e452/</url>
+      
+        <content type="html"><![CDATA[<html><head><link rel="stylesheet" href="/css/demobox.css"></head><body><p>CSS（Cascading Style Sheets即层叠堆积样式）是在HTML元素提供网页结构的地方，控制在该网页上呈现这些HTML元素的方式。样式表可以应用于任何网页，使编辑和管理多页网站的外观和布局变得更加容易。</p><p>CSS3是CSS的最新版本，包含许多强大的功能和属性，使Web设计人员可以更好地控制网页，而不必依赖于使用图像或外部JavaScript库。功能包括灵活的框，动画，多列，圆角，阴影，过渡，渐变，动画等等。</p><p>在这里，我将介绍内容几乎涵盖了CSS和CSS3的所有领域，包括flexbox，动画，图像过滤器，响应工具包，框架，库等等。</p><a id="more"></a><h4 id="CSS基础"><a href="#CSS基础" class="headerlink" title="CSS基础"></a>CSS基础</h4>    <div class="demobox">      <div class="demobox-result"></div>    <div class="demobox-meta"><div class="demobox-name">hexo-tag-demo</div><div class="demobox-intro"><p>An example for hexo-tag-demo.</p><p>The <code>&lt;intro&gt;</code> tag supports <strong>markdown</strong>.</p><template>  <div id="colorbox"></div>  <button id="demo-button">Click Me</button></template><script>  document.getElementById('demo-button').onclick = function() {    var randomColor = '#' + Math.random().toString().substr(2,6);    document.getElementById('colorbox').innerHTML = randomColor;    document.getElementById('colorbox').style.background = randomColor;  }</script><style>  #colorbox {    border: 1px solid #ddd;    height: 150px;    width: 200px;    line-height: 150px;    text-align: center;    margin-bottom: 20px;    color: #fff;  }  #demo-button {    padding: 5px 10px;  }</style></div></div></div>  </body></html>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Nothing</title>
       <link href="/posts/5782501d/"/>
       <url>/posts/5782501d/</url>
       
-        <content type="html"><![CDATA[<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read." />    <label for="pass">Enter password to read.</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+        <content type="html"><![CDATA[<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read." />    <label for="pass">Enter password to read.</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX19cMrigtWnrNKOvhC5giZ/+HHrjtD7mphMYLHaed4KOBsP47RyuJ77uepLeH1p2oUSz+Ax47dDLaL/QC+pzCkYezQmc5l0anx4FH0SofB7ZBjKAj4Y78Jvin9cT/r6sZgX/Z8amdGT22waFMNfcmjakOWi56fxpXXU+HfOSZ4FPELrE+6W5XGCwm4V9JOFKT78IWVAQ77zx6rwZuUqpHiK1sQMY6mDi1nW9CV/QLWvScIi/+nz5Oq3aBROF7QLBqfkW8kMFL4RWJDSPJQQA7U8VEdv1dALlmlwrj54DugxGT+wxZEhFDI3fJ4ZZQKlIVvFhW/IMZj+OnA==</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       
       
       <categories>

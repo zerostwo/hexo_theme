@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zerostwo.github.io/"/>
-  <updated>2018-12-01T16:01:45.257Z</updated>
+  <updated>2018-12-05T14:38:23.459Z</updated>
   <id>https://zerostwo.github.io/</id>
   
   <author>
@@ -17,15 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hexo插件使用总结</title>
+    <link href="https://zerostwo.github.io/posts/7f07612c/"/>
+    <id>https://zerostwo.github.io/posts/7f07612c/</id>
+    <published>2018-12-05T14:12:10.000Z</published>
+    <updated>2018-12-05T14:38:23.459Z</updated>
+    
+    <summary type="html">
+    
+      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h3 id=&quot;hexo插件简介&quot;&gt;&lt;a href=&quot;#hexo插件简介&quot; class=&quot;headerlink&quot; title=&quot;hexo插件简介&quot;&gt;&lt;/a&gt;hexo插件简介&lt;/h3&gt;&lt;p&gt;Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心模块的源码。在 Hexo 中有两种形式的插件：&lt;/p&gt;
+&lt;h4 id=&quot;脚本（Scripts）&quot;&gt;&lt;a href=&quot;#脚本（Scripts）&quot; class=&quot;headerlink&quot; title=&quot;脚本（Scripts）&quot;&gt;&lt;/a&gt;脚本（Scripts）&lt;/h4&gt;&lt;p&gt;如果您的代码很简单，建议您编写脚本，您只需要把 JavaScript 文件放到 &lt;code&gt;scripts&lt;/code&gt; 文件夹，在启动时就会自动载入。&lt;/p&gt;
+&lt;h4 id=&quot;插件（Packages）&quot;&gt;&lt;a href=&quot;#插件（Packages）&quot; class=&quot;headerlink&quot; title=&quot;插件（Packages）&quot;&gt;&lt;/a&gt;插件（Packages）&lt;/h4&gt;&lt;p&gt;如果您的代码较复杂，或是您想要发布到 NPM 上，建议您编写插件。首先，在 &lt;code&gt;node_modules&lt;/code&gt; 文件夹中建立文件夹，文件夹名称开头必须为 &lt;code&gt;hexo-&lt;/code&gt;，如此一来 Hexo 才会在启动时载入否则 Hexo 将会忽略它。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="计算机相关" scheme="https://zerostwo.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="前端" scheme="https://zerostwo.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CSS</title>
     <link href="https://zerostwo.github.io/posts/ee69e452/"/>
     <id>https://zerostwo.github.io/posts/ee69e452/</id>
     <published>2018-12-01T15:15:02.000Z</published>
-    <updated>2018-12-01T16:01:45.257Z</updated>
+    <updated>2018-12-05T14:11:40.186Z</updated>
     
     <summary type="html">
     
-      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;CSS（Cascading Style Sheets即层叠堆积样式）是在HTML元素提供网页结构的地方，控制在该网页上呈现这些HTML元素的方式。样式表可以应用于任何网页，使编辑和管理多页网站的外观和布局变得更加容易。&lt;/p&gt;
+      &lt;html&gt;&lt;head&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/demobox.css&quot;&gt;
+&lt;/head&gt;&lt;body&gt;&lt;p&gt;CSS（Cascading Style Sheets即层叠堆积样式）是在HTML元素提供网页结构的地方，控制在该网页上呈现这些HTML元素的方式。样式表可以应用于任何网页，使编辑和管理多页网站的外观和布局变得更加容易。&lt;/p&gt;
 &lt;p&gt;CSS3是CSS的最新版本，包含许多强大的功能和属性，使Web设计人员可以更好地控制网页，而不必依赖于使用图像或外部JavaScript库。功能包括灵活的框，动画，多列，圆角，阴影，过渡，渐变，动画等等。&lt;/p&gt;
 &lt;p&gt;在这里，我将介绍内容几乎涵盖了CSS和CSS3的所有领域，包括flexbox，动画，图像过滤器，响应工具包，框架，库等等。&lt;/p&gt;
     
@@ -39,11 +62,11 @@
   </entry>
   
   <entry>
-    <title>Love</title>
+    <title>Nothing</title>
     <link href="https://zerostwo.github.io/posts/5782501d/"/>
     <id>https://zerostwo.github.io/posts/5782501d/</id>
     <published>2018-11-23T15:35:27.000Z</published>
-    <updated>2018-12-05T03:39:25.510Z</updated>
+    <updated>2018-12-05T14:09:13.394Z</updated>
     
     <summary type="html">
     
