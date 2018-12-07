@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zerostwo.github.io/"/>
-  <updated>2018-12-05T14:46:45.767Z</updated>
+  <updated>2018-12-07T04:36:48.114Z</updated>
   <id>https://zerostwo.github.io/</id>
   
   <author>
@@ -21,11 +21,13 @@
     <link href="https://zerostwo.github.io/posts/7f07612c/"/>
     <id>https://zerostwo.github.io/posts/7f07612c/</id>
     <published>2018-12-05T14:12:10.000Z</published>
-    <updated>2018-12-05T14:46:45.767Z</updated>
+    <updated>2018-12-07T04:36:48.114Z</updated>
     
     <summary type="html">
     
-      &lt;html&gt;&lt;head&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/demobox.css&quot;&gt;&lt;/head&gt;&lt;body&gt;### hexo插件简介&lt;br&gt;Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心模块的源码。在 Hexo 中有两种形式的插件：&lt;br&gt;#### 脚本（Scripts）&lt;br&gt;如果您的代码很简单，建议您编写脚本，您只需要把 JavaScript 文件放到 &lt;code&gt;scripts&lt;/code&gt; 文件夹，在启动时就会自动载入。&lt;br&gt;#### 插件（Packages）&lt;br&gt;如果您的代码较复杂，或是您想要发布到 NPM 上，建议您编写插件。首先，在 &lt;code&gt;node_modules&lt;/code&gt; 文件夹中建立文件夹，文件夹名称开头必须为 &lt;code&gt;hexo-&lt;/code&gt;，如此一来 Hexo 才会在启动时载入否则 Hexo 将会忽略它。&lt;br&gt;
+      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h3 id=&quot;hexo插件简介&quot;&gt;&lt;a href=&quot;#hexo插件简介&quot; class=&quot;headerlink&quot; title=&quot;hexo插件简介&quot;&gt;&lt;/a&gt;hexo插件简介&lt;/h3&gt;&lt;p&gt;Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心模块的源码。在 Hexo 中有两种形式的插件：&lt;/p&gt;
+&lt;h4 id=&quot;脚本（Scripts）&quot;&gt;&lt;a href=&quot;#脚本（Scripts）&quot; class=&quot;headerlink&quot; title=&quot;脚本（Scripts）&quot;&gt;&lt;/a&gt;脚本（Scripts）&lt;/h4&gt;&lt;p&gt;如果您的代码很简单，建议您编写脚本，您只需要把 JavaScript 文件放到 &lt;code&gt;scripts&lt;/code&gt; 文件夹，在启动时就会自动载入。&lt;/p&gt;
+&lt;h4 id=&quot;插件（Packages）&quot;&gt;&lt;a href=&quot;#插件（Packages）&quot; class=&quot;headerlink&quot; title=&quot;插件（Packages）&quot;&gt;&lt;/a&gt;插件（Packages）&lt;/h4&gt;&lt;p&gt;如果您的代码较复杂，或是您想要发布到 NPM 上，建议您编写插件。首先，在 &lt;code&gt;node_modules&lt;/code&gt; 文件夹中建立文件夹，文件夹名称开头必须为 &lt;code&gt;hexo-&lt;/code&gt;，如此一来 Hexo 才会在启动时载入否则 Hexo 将会忽略它。&lt;br&gt;
     
     </summary>
     
