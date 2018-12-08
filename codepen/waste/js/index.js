@@ -1,1 +1,0 @@
-//not responsive because how do you make a responsive periodic table 😳
