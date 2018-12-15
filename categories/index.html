@@ -280,28 +280,10 @@
 		
 	</div> <!-- sidebar -->
 	<div class="widget">
-		<h4>时间</h4>
+		<h4>访客</h4>
 		<div class="text-center">
-			<script language="javascript">
-				function show_date_time() {
-					window.setTimeout("show_date_time()", 1000);
-					BirthDay = new Date("11/23/2018 23:56:24"); //这个日期是可以修改的
-					today = new Date();
-					timeold = (today.getTime() - BirthDay.getTime()); //其实仅仅改了这里
-					sectimeold = timeold / 1000
-					secondsold = Math.floor(sectimeold);
-					msPerDay = 24 * 60 * 60 * 1000
-					e_daysold = timeold / msPerDay
-					daysold = Math.floor(e_daysold);
-					e_hrsold = (e_daysold - daysold) * 24;
-					hrsold = Math.floor(e_hrsold);
-					e_minsold = (e_hrsold - hrsold) * 60;
-					minsold = Math.floor((e_hrsold - hrsold) * 60);
-					seconds = Math.floor((e_minsold - minsold) * 60);
-					span_dt_dt.innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分钟" + seconds + "秒";
-				}
-				show_date_time();
-			</script><span id="span_dt_dt"> </span>
+			<script type="text/javascript" src="//ra.revolvermaps.com/0/0/6.js?i=0xe4qhv59uw&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async">
+			</script>
 		</div>
 	</div>
 </div> <!-- col-md-3 -->
