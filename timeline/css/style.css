@@ -63,16 +63,7 @@ Main Components
   height: 100%;
   width: 20px;
 }
-.cd-horizontal-timeline .events-wrapper::before {
-  left: 0;
-  background-image: -webkit-linear-gradient( left , #133484, rgba(248, 248, 248, 0));
-  background-image: linear-gradient(to right, #133484, rgba(248, 248, 248, 0));
-}
-.cd-horizontal-timeline .events-wrapper::after {
-  right: 0;
-  background-image: -webkit-linear-gradient( right , #133484, rgba(248, 248, 248, 0));
-  background-image: linear-gradient(to left, #133484, rgba(248, 248, 248, 0));
-}
+
 .cd-horizontal-timeline .events {
   /* this is the grey line/timeline */
   position: absolute;
