@@ -10,12 +10,12 @@ Primary style
 body {
   font-size: 18px;
   font-family: DOS, SimHei, Monaco, Menlo, Consolas, 'Courier New', monospace;
-  color: #bbbbbb;
+  color: #bbb;
   background-color: #133484;
 }
 
 a {
-  color: #7b9d6f;
+  color: #bbb;
   text-decoration: none;
 }
 
@@ -84,7 +84,7 @@ Main Components
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #7b9d6f;
+  background-color: #bbb;
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
   -ms-transform: scaleX(0);
@@ -136,18 +136,18 @@ Main Components
   transition: background-color 0.3s, border-color 0.3s;
 }
 .no-touch .cd-horizontal-timeline .events a:hover::after {
-  background-color: #7b9d6f;
-  border-color: #7b9d6f;
+  background-color: #bbb;
+  border-color: #bbb;
 }
 .cd-horizontal-timeline .events a.selected {
   pointer-events: none;
 }
 .cd-horizontal-timeline .events a.selected::after {
-  background-color: #7b9d6f;
-  border-color: #7b9d6f;
+  background-color: #bbb;
+  border-color: #bbb;
 }
 .cd-horizontal-timeline .events a.older-event::after {
-  border-color: #7b9d6f;
+  border-color: #bbb;
 }
 @media only screen and (min-width: 1100px) {
   .cd-horizontal-timeline {
@@ -212,7 +212,7 @@ Main Components
   right: 0;
 }
 .no-touch .cd-timeline-navigation a:hover {
-  border-color: #7b9d6f;
+  border-color: #bbb;
 }
 .cd-timeline-navigation a.inactive {
   cursor: not-allowed;
