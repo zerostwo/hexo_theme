@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zerostwo.github.io/"/>
-  <updated>2018-12-15T13:12:18.746Z</updated>
+  <updated>2018-12-20T11:13:45.401Z</updated>
   <id>https://zerostwo.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python爬虫综述</title>
+    <link href="https://zerostwo.github.io/posts/dc728ef1/"/>
+    <id>https://zerostwo.github.io/posts/dc728ef1/</id>
+    <published>2018-12-18T10:14:45.000Z</published>
+    <updated>2018-12-20T11:13:45.401Z</updated>
+    
+    <summary type="html">
+    
+      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;最近我在访问我们学校教务处网站查查课表的时候，发现学校访问课表的逻辑太反人类思维了，之前就听说过利用Python爬虫可以快速抓取指定网页的内容，再加上本身有一定的Python和前端的基础，所以我决定系统的学习一下Python爬虫。&lt;br&gt;在今后关于爬虫的文章中，我是基于Ubuntu18.04LST系统下的Python 3.7.0版本。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="计算机基础" scheme="https://zerostwo.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="Python" scheme="https://zerostwo.github.io/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>jQuery教程</title>

@@ -1,0 +1,368 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <meta name="baidu-site-verification" content="bOtogbnsOb">
+  <meta name="google-site-verification" content="5G0omHB4kxJIStIO3K-ecrMCBK55gJGoy5aYFp2VlpA">
+  <meta name="google-site-verification" content="Vfi3eRlla73KDavZeC4aRJ6FhA8B6kC5BTHamTRvRhA">
+  
+  <title>
+    Python爬虫综述 | Zerostwo
+  </title>
+  
+  <meta name="author" content="Sinclair Duan">
+  
+  
+  <meta name="description" content="This is my world!">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta property="og:title" content="Python爬虫综述">
+  
+  <meta property="og:site_name" content="Zerostwo">
+  
+  <meta property="og:image" content="">
+  
+  
+  <link rel="alternative" href="/atom.xml" title="Zerostwo" type="application/atom+xml">
+  
+  
+  <link href="/favicon.png" rel="icon">
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="/js/jquery-3.3.1.min.js"></script>
+  <!-- analytics -->
+  <meta name="generator" content="Hexo 3.8.0"><script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-131168697-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+</head><body>
+  <script>
+    $(document).ready(function () {
+      $(".info").remove();
+    });
+  </script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?daf5768680828a11c9bcbf706f43a0d2";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-131168697-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-131168697-1');
+  </script>
+
+
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Zerostwo</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/timeline" title="Know everything.">
+			  <i class=""></i>Timeline
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/wish" title="Come on.">
+			  <i class=""></i>Wish
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class=""></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      <div class="page-header">
+			<h1> Python爬虫综述</h1>
+		</div>
+	
+
+
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+		
+
+			<!-- content -->
+			<div class="mypage">
+				
+
+				<p>最近我在访问我们学校教务处网站查查课表的时候，发现学校访问课表的逻辑太反人类思维了，之前就听说过利用Python爬虫可以快速抓取指定网页的内容，再加上本身有一定的Python和前端的基础，所以我决定系统的学习一下Python爬虫。<br>在今后关于爬虫的文章中，我是基于Ubuntu18.04LST系统下的Python 3.7.0版本。<br><a id="more"></a></p>
+<h4 id="网络爬虫（Web-crawler）"><a href="#网络爬虫（Web-crawler）" class="headerlink" title="网络爬虫（Web crawler）"></a>网络爬虫（Web crawler）</h4><p>首先我们来看什么是爬虫。爬虫的全称为网络爬虫，顾名思义它是一种从网络上获取信息的虫子，可以形象的想像一只蜘蛛在它的蜘蛛网上觅食，因此爬虫也被成为蜘蛛。<br>爬虫作为数据采集的有力手段之一，需要我们去学习掌握它，在学习Python爬虫之前，需要一定的知识储备，主要由下面两个方面：</p>
+<ul>
+<li>正则表达式<br>  正则表达式对于高效的爬取信息来说非常重要，这里我推荐一个入门链接<a href="https://www.oschina.net/question/12_9507" target="_blank" rel="noopener">[精华] 正则表达式30分钟入门教程</a></li>
+<li>Python语言基础<br>  既然都说了是Python爬虫，Python语言是必不可少的，如果不会Python的小伙伴，可以去看看<a href="https://morvanzhou.github.io/" target="_blank" rel="noopener">莫烦Python</a>，挺不错的！</li>
+</ul>
+<p>在Python中，如果要实现爬虫，由非常多的包，一般来说，按照程序复杂程度不同可以分为两类：</p>
+<ol>
+<li>用于编写爬虫的脚本，比如<code>requests</code>，<code>urllib</code>等。</li>
+<li>用于编写爬虫的项目，比如<code>scrapy</code>，<code>pyspider</code>等。</li>
+</ol>
+<p>我们不需要对每一种包都精通，只需要精通典型的几种包，便可以实现相关需求。因为很多包实现的功能重复性都是非常高的，一般使用<code>requests</code>+<code>scrapy</code>。</p>
+<h5 id="requests基础"><a href="#requests基础" class="headerlink" title="requests基础"></a><code>requests</code>基础</h5><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">r = requests.get(<span class="string">"https://www.baidu.com"</span>)</span><br></pre></td></tr></tbody></table></figure>
+<p><code>.status_code</code>查看状态码，Response 200 说明get成功，不是200说明失败<br></p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">r.status_code</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><code>.encoding</code> 重新编码<br></p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">r.encoding = <span class="string">'utf-8'</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><code>.text</code> 查看内容<br></p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">r.text</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>Requests库主要有7个主要方法，分别是：</p>
+<ul>
+<li>requests.request(): 构造一个请求，支撑以下各种方法</li>
+<li>requests.get(): 获取html网页的方法，对应于http的GET</li>
+<li>requests.head(): 获取html网页头信息的方法，对应于http的HEAD</li>
+<li>requests.post(): 向html网页发送POST请求的方法，对应于http的POST</li>
+<li>requests.put(): 向html网页放松PUT请求的方法，对应于http的PUT</li>
+<li>requests.patch(): 向html网页提交局部修改请求，对应于http的PATCH</li>
+<li>requests.delete(): 向html网页提交删除请求，对应于http的DELETE<br>获取html网页的方法，对应于http的GET<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">r = requests.get(url, params=<span class="keyword">None</span>, **kwargs)</span><br></pre></td></tr></tbody></table></figure>
+</li>
+</ul>
+<p>返回的对象是Response = 构造一个向服务器请求资源的Request对象</p>
+<ul>
+<li>url 拟获得页面的链接</li>
+<li>params 在url中增加的额外参数，可是字典或者字典流</li>
+<li>**kwargs 12个控制访问参数<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">type(r)</span><br><span class="line">Reture: requests.models.Response</span><br></pre></td></tr></tbody></table></figure>
+</li>
+</ul>
+<p>在Response对象中，最常用的有以下五个属性：</p>
+<ul>
+<li>r.status_code: http请求返回状态，200表示成功，404表示失败</li>
+<li>r.text: http响应内容的字符串形式，即url对应页面的内容</li>
+<li>r.encoding: 从http header中猜测响应内容编码方式，如果html的header中不存在charset字段，则默认编码为ISO-8859-1，这个默认编码不能识别中文</li>
+<li>r.apparent_encoding: 从内容中分析出的响应内容编码方式。这个是根据html的body部分分析出url的编码方法</li>
+<li>r.content: http响应内容的二进制形式<br>理解Requets库的异常</li>
+<li>requests.ConnectionError: 网络链接异常，如DNS的查询失败，拒绝链接等</li>
+<li>requests.HTTPError: http错误异常</li>
+<li>requests.URLRequired: URL缺失异常</li>
+<li>requests.TooManyRedirects: 超过最大重定向数</li>
+<li>requests.ConnectTimeout: 链接远程服务器异常</li>
+<li>requests.Timeout: 请求url超时</li>
+<li>r.raise_for_status(): 如果不是200，产生异常requests.HTTPError<br>爬取网页通用框架<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getHTMLText</span><span class="params">(url)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        r = requests.get(url, timeout=<span class="number">30</span>)</span><br><span class="line">        r.raise_for_status()</span><br><span class="line">        r.encoding = r.apparent_encoding</span><br><span class="line">        <span class="keyword">return</span> r.text</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"产生异常"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    url = <span class="string">"https://www.baidu.com"</span></span><br><span class="line">    print(getHTMLText(url))</span><br></pre></td></tr></tbody></table></figure>
+</li>
+</ul>
+<p>HTTP协议（Hypertext Transfer Protocol），超文本传输协议。<br>URL格式：<a href="http://host[:port][path]" target="_blank" rel="noopener">http://host[:port][path]</a></p>
+<ul>
+<li>host: 合法的Internet主机域名或者ip</li>
+<li>port: 端口号，缺省为80</li>
+<li>path: 请求资源路径<br>HTTP协议对资源的操作</li>
+<li>GET: 请求URL位置的资源</li>
+<li>HEAD: 请求获取URL位置资源的响应消息报告，即获得该资源的头部信息</li>
+<li>POST: 请求向URL位置的资源后附加新的数据</li>
+<li>PUT: 请求向URL位置储存一个资源，覆盖原URL位置的资源</li>
+<li>PATCH: 请求局部更新URL位置资源，即改变该出处资源的部分内容</li>
+<li>DELETE: 请求删除URL位置储存的资源</li>
+</ul>
+<p>获取html网页头信息的方法，对应于http的HEAD<br></p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">r = requests.head(url) </span><br><span class="line">r.headers</span><br><span class="line">r.text</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>向html网页发送POST请求的方法，对应于http的POST<br></p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">payload = {<span class="string">'key1'</span>:<span class="string">'value1'</span>, <span class="string">'key2'</span>:<span class="string">'value2'</span>}</span><br><span class="line">r = requests.post(url, data = payload) </span><br><span class="line">print(r.text)</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>构造一个请求，支撑以下各种方法<br></p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">requests.request(method, url, **kwargs)</span><br></pre></td></tr></tbody></table></figure><p></p>
+<ul>
+<li>method 请求方式，对应get/post/put等7种</li>
+<li>url 拟获取页面url链接</li>
+<li>**kwargs 13个控制访问参数<br>这些参数有：</li>
+</ul>
+<ol>
+<li>params: 字典或者字节序列，作为参数传入url中<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">kv = {<span class="string">'key1'</span>:<span class="string">'value1'</span>, <span class="string">'key2'</span>:<span class="string">'value2'</span>}</span><br><span class="line">r = requests.request(<span class="string">'GET'</span>, <span class="string">'http://www.baidu.com'</span>, params=kv)</span><br><span class="line">print(r.url)</span><br></pre></td></tr></tbody></table></figure>
+</li>
+</ol>
+<p>Return: ‘<a href="https://www.baidu.com/?key1=value1&amp;key2=value2'" target="_blank" rel="noopener">https://www.baidu.com/?key1=value1&amp;key2=value2'</a></p>
+<p>爬取京东商品信息：<br></p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">r = requests.get(<span class="string">'https://item.jd.com/7651927.html'</span>)</span><br><span class="line">r.status_code</span><br></pre></td></tr></tbody></table></figure><p></p>
+
+			</div>
+
+			<div>
+				<center>
+					<div class="pagination">
+
+    
+    
+    <a type="button" class="btn btn-default disabled">
+        上一篇</a>
+    
+
+    <a href="/" type="button" class="btn btn-default">Home</a>
+    
+    <a href="/posts/383b9d7d/" type="button" class="btn btn-default ">
+        下一篇</a>
+    
+
+    
+</div>
+				</center>
+			</div>
+
+			<!-- comment -->
+			<section id="comment">
+    <h2 class="title">留言</h2>
+
+    
+</section>
+
+
+			<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+			<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+			<div id="vcomments"></div>
+			<script>
+				new Valine({
+					el: '#vcomments',
+					appId: 'mXc5YF2qgIExoIXatFw8Unrt-gzGzoHsz',
+					appKey: 'q6qrzQ55W3DRDItrvRfUwgEY'
+				})
+			</script>
+		</div> <!-- col-md-9/col-md-12 -->
+
+		
+		<div id="side_meta">
+			<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2018-12-18 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+        <meta name="generator" content="Hexo 3.8.0"><li>
+  </li><li><a href="/categories/计算机基础/">计算机基础<span>4</span></a></li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	  <meta name="generator" content="Hexo 3.8.0"><li><a href="/tags/Python/">Python<span>1</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+		   <span class="toc-title">Contents</span>
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#网络爬虫（Web-crawler）"><span class="toc-article-text">网络爬虫（Web crawler）</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-5"><a class="toc-article-link" href="#requests基础"><span class="toc-article-text">requests基础</span></a></li></ol></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+		</div>
+		
+
+	</div><!-- row -->
+	
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer>
+      <p>
+  <br><i class="fa fa-copyright"></i> 2018 <a href="https://github.com/zerostwo/zerostwo.github.io">Zerostwo</a>
+  <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <span id="busuanzi_container_site_pv">
+    <i class="fa fa-linux" aria-hidden="true"></i>
+    <span id="busuanzi_value_site_pv"></span></span>
+</p>
+    </footer>
+  </div> <!-- container-narrow -->
+  
+  <a id="gotop" href="#">   
+  <span>⬆︎TOP</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+</body></html>
