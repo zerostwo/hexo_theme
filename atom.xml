@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zerostwo.github.io/"/>
-  <updated>2018-12-20T14:47:24.189Z</updated>
+  <updated>2018-12-20T14:49:58.419Z</updated>
   <id>https://zerostwo.github.io/</id>
   
   <author>
@@ -21,19 +21,17 @@
     <link href="https://zerostwo.github.io/posts/2fa137bc/"/>
     <id>https://zerostwo.github.io/posts/2fa137bc/</id>
     <published>2018-12-20T14:31:52.000Z</published>
-    <updated>2018-12-20T14:47:24.189Z</updated>
+    <updated>2018-12-20T14:49:58.419Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;CodyHouse的框架是一个&lt;code&gt;SCSS&lt;/code&gt;全局变量系统，代表了构建Web项目风格的基础。&lt;/p&gt;
+      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;CodyHouse的框架是一个&lt;code&gt;SCSS&lt;/code&gt;全局变量系统，代表了构建Web项目风格的基础。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;下载地址: &lt;a
-        
-      
+&lt;li&gt;下载地址: &lt;a href=&quot;https://github.com/CodyHouse/codyhouse-framework&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CodyHouse’s Framework&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;官方文档: &lt;a href=&quot;https://codyhouse.co/ds/get-started&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Get started&lt;/a&gt;&lt;br&gt;CodyHouse的设计系统是一个生产就绪的组件和工具库，使网页设计师能够更快更好地制作数字体验。&lt;br&gt;该系统分为三个主要部分：&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://codyhouse.co/ds/docs/framework&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;框架&lt;/a&gt;，一个坚实的CSS全局系统。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://codyhouse.co/ds/components&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;组件&lt;/a&gt;，HTML，CSS，JS组件库，与框架无缝协作。&lt;/li&gt;
+&lt;li&gt;CodyHouse Studio（即将推出），一系列网页设计工具。
     
     </summary>
     
