@@ -1,0 +1,52 @@
+<html><head></head><body><p align="center"><br>  <a href="https://codyhouse.co"><br>    <img src="https://codyhouse.co/avatar-sm.png" alt="CodyHouse logo" width="80" height="80"><br>  </a><br></p>
+
+
+<h1 id="CodyHouse’s-Framework"><a href="#CodyHouse’s-Framework" class="headerlink" title="CodyHouse’s Framework"></a>CodyHouse’s Framework</h1><p>The CodyHouse’s framework is a system of SCSS globals representing the base upon which you can build the style of your web project.</p>
+<p><a href="https://codyhouse.co/ds/get-started">Explore the documentation on codyhouse.co</a>.</p>
+<p>The framework serves three main purposes:</p>
+<ol>
+<li><strong>Template</strong> - it provides you with a CSS template to speed up the first steps of setting up the style of a web project.</li>
+<li><strong>Responsive</strong> - it includes smart rules that take care of several responsiveness aspects.</li>
+<li><strong>Design system</strong> - it simplifies the process of creating the base of your design system.</li>
+</ol>
+<p>The framework is composed of:</p>
+<ul>
+<li><strong>A collection of SCSS files</strong> that compile into a _global.scss file. Make sure to import this style before your own;</li>
+<li><strong>A util.js file</strong> with some utility functions that are used in the <a href="https://codyhouse.co/ds/components">CodyHouse components</a>. Make sure to import this before the component script file.</li>
+</ul>
+<pre><code class="text">codyhouse-framework/
+└── main/
+    ├── assets/
+    │   ├── css/
+    │   │   ├── globals/
+    │   │   │   ├── _alignment.scss
+    │   │   │   ├── _breakpoints.scss
+    │   │   │   ├── _buttons.scss
+    │   │   │   ├── _colors.scss
+    │   │   │   ├── _forms.scss
+    │   │   │   ├── _grid-layout.scss
+    │   │   │   ├── _icons.scss
+    │   │   │   ├── _mixins.scss
+    │   │   │   ├── _reset.scss
+    │   │   │   ├── _shared-styles.scss
+    │   │   │   ├── _spacing.scss
+    │   │   │   ├── _typography.scss
+    │   │   │   └── _z-index.scss
+    │   │   ├── _globals.scss
+    │   │   ├── style.css
+    │   │   └── style.scss
+    │   └── js/
+    │       └── util.js
+    └── index.html
+</code></pre>
+<h2 id="Progressive-enhancement"><a href="#Progressive-enhancement" class="headerlink" title="Progressive enhancement"></a>Progressive enhancement</h2><p>The Framework and the Components are built following the principle of progressive enhancement. Please make sure to include the following script in the <code>&lt;head&gt;</code> of your document:</p>
+<pre><code class="html"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"><span class="built_in">document</span>.getElementsByTagName(<span class="string">"html"</span>)[<span class="number">0</span>].className += <span class="string">" js"</span>;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+</code></pre>
+<p>The script is used in CSS to target that Javascript is enabled and apply additional style accordingly. If you don’t include the script, part of the style of the components won’t be visible.</p>
+<h2 id="Gulp"><a href="#Gulp" class="headerlink" title="Gulp"></a>Gulp</h2><p>The framework includes a Gulp file with some basic configurations needed to run a web project based on the framework.</p>
+<p>To use this Gulp configuration file, once you have downloaded the framework, make sure to run the following commands in your command line:</p>
+<pre><code>npm install
+gulp watch
+</code></pre><p>The first command will install the modules the framework requires for compiling SCSS into CSS; the second will launch your project on a development server.</p>
+<p>If you are new to Gulp, take a look at this <a href="https://css-tricks.com/gulp-for-beginners/">beginners guide</a>.</p>
+</body></html>
