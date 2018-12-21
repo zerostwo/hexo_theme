@@ -1,4 +1,7 @@
-## Zerostwo
+![favicon](favicon)
+
+Zerostwo
+===
 
 #### This is my world!
 
