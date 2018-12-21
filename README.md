@@ -1,5 +1,3 @@
-![favicon](favicon)
-
 Zerostwo
 ===
 
