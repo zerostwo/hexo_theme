@@ -16,10 +16,11 @@
     border-radius: 6px
 }
 
-body {
+html, body {
     position: relative;
     padding-top: 40px;
-    padding-bottom: 70px
+    padding-bottom: 70px;
+    overflow-x: hidden
 }
 
 .content {
