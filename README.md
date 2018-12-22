@@ -7,14 +7,18 @@
 Zerostwo
 ===
 
-#### This is my world!
+This is my world!
+---
 
-#### 2018.11.23
+网站大事件：
+* 2018.11.23
+[zerostwo.github.io](https://zerostwo.github.io)诞生！
 
-第一次配置好我的博客。
+* 2018.11.27
+配置好Mathjax，能够显示数学及化学符号；
 
-#### 2018.11.27
+* 2018.12.16
+在网页上制作好[Timeline]（https://zerostwo.github.io/timeline/）板块；
 
-- 能够显示化学式；
-- 能够显示公式；
-
+* Now 
+To be continued. . .
