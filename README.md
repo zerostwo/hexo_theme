@@ -1,3 +1,5 @@
+![Zerostwo](https://img.cdn.zzmath.top/static/images/logp.png)
+
 Zerostwo
 ===
 
@@ -11,9 +13,3 @@ Zerostwo
 
 - 能够显示化学式；
 - 能够显示公式；
-
-![](https://img.cdn.zzmath.top/static/images/florence.gif)
-
-
-[![Zerostwo]](https://zerostwo.github.io/)  
-[Zerostwo]:https://img.cdn.zzmath.top/static/images/florence.gif "Florence"  
