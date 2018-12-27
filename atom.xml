@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zerostwo.github.io/"/>
-  <updated>2018-12-23T02:22:38.243Z</updated>
+  <updated>2018-12-27T15:31:49.940Z</updated>
   <id>https://zerostwo.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>物理化学</title>
+    <link href="https://zerostwo.github.io/posts/a5a93efa/"/>
+    <id>https://zerostwo.github.io/posts/a5a93efa/</id>
+    <published>2018-12-27T14:54:33.000Z</published>
+    <updated>2018-12-27T15:31:49.940Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;化学动力学&quot;&gt;&lt;a href=&quot;#化学动力学&quot; class=&quot;headerlink&quot; title=&quot;化学动力学&quot;&gt;&lt;/a&gt;&lt;p class=&quot;text-center&quot;&gt;化学动力学&lt;/p&gt;&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="学习" scheme="https://zerostwo.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="物理化学" scheme="https://zerostwo.github.io/tags/%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>CodyHouse&#39;s Framework</title>
